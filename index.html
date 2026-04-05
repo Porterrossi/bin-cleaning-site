@@ -692,6 +692,101 @@
                 transform: scale(1);
             }
         }
+        /* Before & After Section */
+        .before-after-section {
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, #F8FFFE 0%, #E8F5F4 100%);
+        }
+
+        .before-after-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .before-after-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .before-after-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+        }
+
+        .badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 12px 24px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            font-size: 1.1rem;
+            border-radius: 30px;
+            z-index: 10;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            letter-spacing: 1px;
+        }
+
+        .before-badge {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+            color: white;
+        }
+
+        .after-badge {
+            background: linear-gradient(135deg, #51cf66, #37b24d);
+            color: white;
+        }
+
+        .image-wrapper {
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .before-after-card:hover .image-wrapper img {
+            transform: scale(1.05);
+        }
+
+        .image-caption {
+            padding: 20px;
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        @media (max-width: 768px) {
+            .before-after-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .image-wrapper {
+                height: 350px;
+            }
+
+            .badge {
+                font-size: 0.9rem;
+                padding: 10px 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -724,7 +819,40 @@
             </div>
         </div>
     </section>
+</section>
 
+    <!-- Before & After Section -->
+    <section class="before-after-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>See The Difference!</h2>
+                <p>Real results from our bin cleaning service</p>
+            </div>
+            
+            <div class="before-after-container">
+                <!-- Before Photo -->
+                <div class="before-after-card">
+                    <div class="badge before-badge">BEFORE</div>
+                    <div class="image-wrapper">
+                        <img src="https://i.imgur.com/FaL5wIO.jpeg" alt="Dirty bin before cleaning - covered in grime and mold">
+                    </div>
+                    <p class="image-caption">😷 Dirty, smelly, bacteria-filled</p>
+                </div>
+
+                <!-- After Photo -->
+                <div class="before-after-card">
+                    <div class="badge after-badge">AFTER</div>
+                    <div class="image-wrapper">
+                        <img src="https://i.imgur.com/sAANTBk.jpeg" alt="Clean bin after professional cleaning - spotless and fresh">
+                    </div>
+                    <p class="image-caption">✨ Spotless, fresh, sanitized!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
     <!-- Services Section -->
     <section class="services" id="services">
         <div class="container">
